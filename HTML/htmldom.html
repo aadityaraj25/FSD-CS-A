@@ -31,12 +31,12 @@
 
             // allquery 
             const id = document.querySelectorAll("div")
-            id.fetch((id1)=>{
+            id.forEach((id1)=>{
                 const para = document.createElement("p")
                 para.textContent="This is new Paragraph";
                 para.style.background="lightblue";
                 para.style.color="white";
-                id1.append(para);
+                id1.appendChild(para);
             })
         }
     </script>
