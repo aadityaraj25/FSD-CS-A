@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* #adi{
+            border: 5px solid lightcoral;
+            height: 300px;
+            width: 300px;
+            background-color: lightblue;
+        } */
+    </style>
+</head>
+<body id="adi">
+    <button onclick="red()" >RED</button>
+    <button  onclick="green()">GREEN</button>
+    <button onclick="blue()">BLUE</button>
+    <!-- <div id="adi" >
+        <button onclick="abes()" >Click</button>
+        <p id="aaa"></p>
+    </div>
+    <script>
+        function abes(){
+            document.getElementById("aaa").innerHTML="<h1>Hello</h1>";
+        }
+    </script> -->
+    <script>
+        function red(){
+            document.getElementById("adi").style.backgroundColor="lightcoral";
+        }
+        function blue(){
+            document.getElementById("adi").style.backgroundColor="lightblue";
+        }
+        function green(){
+            document.getElementById("adi").style.backgroundColor="lightgreen";
+        }
+    </script>
+</body>
+</html>

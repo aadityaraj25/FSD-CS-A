@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImageApp</title>
+    <style>
+        img{
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="img-container">
+        <img id="img1" src="Screenshot (38).png" alt="">
+        <img id="img2" src="Screenshot (39).png" alt="">
+        <img id="img3" src="Screenshot (40).png" alt="">
+    </div>
+    <div>
+        <button id="btn" onclick="changeImage()">Click Here</button>
+    </div>
+    <script>
+        const images = [
+            document.getElementById('img1'),
+            document.getElementById('img2'),
+            document.getElementById('img3')
+        ];
+        let current = 0;
+        for(let i=1; i<images.length; i++) {
+            images[i].style.display = 'none';
+        }
+        function changeImage() {
+            images[current].style.display = 'none';
+            current = (current + 1) % images.length;
+            images[current].style.display = '';
+        }
+    </script>
+</body>
+</html>

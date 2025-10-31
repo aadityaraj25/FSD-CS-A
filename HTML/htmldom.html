@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Dom Example</title>
+</head>
+<body>
+    <button onclick="addparagraph()">Add Paragraph</button>
+    <div id="para1"></div>
+    <p>This is old Paragraph</p>
+    <div class="para2"></div>
+    <script>
+        function addparagraph(){
+            // const para = document.createElement("p");
+            // para.textContent="This is new Paragraph";
+            // para.style.background="lightblue";
+            // para.style.color="white";
+
+            // // get element by id
+            // // const id = document.getElementById("para1")
+            // // id.appendChild(para)
+
+            // // get elementby class
+            // // const id = document.getElementsByClassName("para2")
+            // // id[0].append(para);
+
+            // // single Query Selector
+            // // const id = document.querySelector("div")
+            // // id.appendChild(para)
+
+            // allquery 
+            const id = document.querySelectorAll("div")
+            id.forEach((id1)=>{
+                const para = document.createElement("p")
+                para.textContent="This is new Paragraph";
+                para.style.background="lightblue";
+                para.style.color="white";
+                id1.appendChild(para);
+            })
+        }
+    </script>
+</body>
+</html>
